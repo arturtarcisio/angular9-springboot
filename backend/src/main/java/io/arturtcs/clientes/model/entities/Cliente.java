@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Clientes implements Serializable {
+public class Cliente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class Clientes implements Serializable {
     @Column(nullable = false, length = 11)
     private String cpf;
 
-    @Column
+    @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
 }
