@@ -1,5 +1,6 @@
 package io.arturtcs.clientes.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Cliente implements Serializable {
     @Column(nullable = false, length = 11)
     private String cpf;
 
+    @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
