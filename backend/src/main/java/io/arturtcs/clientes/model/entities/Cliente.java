@@ -28,7 +28,7 @@ public class Cliente implements Serializable {
     private String cpf;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
-    @Column(name = "data_cadastro")
+    @Column(name = "data_cadastro", updatable = false)
     private LocalDate dataCadastro;
 
     @PrePersist
